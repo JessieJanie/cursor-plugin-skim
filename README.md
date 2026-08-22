@@ -1,6 +1,6 @@
 # Skim — Cursor Plugin
 
-Read any webpage as clean Markdown inside Cursor. One tool call, no browser, no scraping setup.
+Read any webpage as clean Markdown inside Cursor — **~4x smaller than raw HTML**, so your model gets more signal with fewer tokens. One tool call, no browser, no scraping setup.
 
 ## Install
 
@@ -14,9 +14,9 @@ Or go to **Settings → Plugins** and search for **Skim**.
 
 ## Setup
 
-No API key is required to start. Skim includes a free tier.
+### Option A — Card API key (recommended)
 
-For higher rate limits, add your card API key to Cursor's MCP environment:
+Get a free key at [skim402.com/pricing](https://skim402.com/pricing) (1,000 reads/month), then add it to Cursor's MCP environment:
 
 ```json
 {
@@ -25,18 +25,16 @@ For higher rate limits, add your card API key to Cursor's MCP environment:
       "command": "npx",
       "args": ["-y", "skim-mcp"],
       "env": {
-        "SKIM_API_KEY": "sk-your-key-here"
+        "SKIM_API_KEY": "sk402_your_key_here"
       }
     }
   }
 }
 ```
 
-Get a free key at [skim402.com/pricing](https://skim402.com/pricing).
+### Option B — Crypto wallet (pay per call)
 
-## Wallet pay (alternative)
-
-If you prefer pay-per-call via Base USDC instead of a card key:
+If you prefer x402 pay-per-call ($0.002 USDC on Base, no monthly plan):
 
 ```json
 "env": {
@@ -44,7 +42,7 @@ If you prefer pay-per-call via Base USDC instead of a card key:
 }
 ```
 
-Fund the wallet with a small USDC balance on Base. Each read costs $0.002.
+Fund the wallet with a small USDC balance on Base. Setup guide: [skim402.com/wallet](https://skim402.com/wallet).
 
 ## Tools
 
