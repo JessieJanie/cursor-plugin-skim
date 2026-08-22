@@ -2,8 +2,8 @@
   "$schema": "https://cursor.com/schemas/plugin.schema.json",
   "name": "skim-mcp",
   "displayName": "Skim — Clean Web Reader",
-  "description": "Read any webpage as clean Markdown in one tool call. Card API key (no wallet) or pay-per-call via x402 on Base.",
-  "version": "0.1.6",
+  "description": "Web reader for AI agents — output ~4x smaller than raw HTML, fewer tokens for your model. Card API key or x402 on Base.",
+  "version": "0.1.9",
   "author": {
     "name": "Skim",
     "url": "https://skim402.com"
