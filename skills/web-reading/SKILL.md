@@ -31,4 +31,5 @@ The response is clean Markdown: body text only, no scripts, no nav, no ads.
 
 ## Payment
 
-Skim uses a card API key (`SKIM_API_KEY`) or x402 pay-per-call via Base USDC. Both paths are configured in your MCP environment — you do not need to manage payments in your prompts.
+ Skim uses a card API key (`SKIM_API_KEY`) in this plugin. The key is configured in
+ your MCP environment, so you do not need to manage payments in your prompts.
