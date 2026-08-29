@@ -1,9 +1,0 @@
-{
-  "mcpServers": {
-    "skim": {
-      "command": "npx",
-      "args": ["-y", "skim-mcp"],
-      "env": {}
-    }
-  }
-}
