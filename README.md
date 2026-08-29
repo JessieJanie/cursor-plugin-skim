@@ -1,29 +1,25 @@
 # Skim — Cursor Plugin
 
-Read any webpage as clean Markdown inside Cursor — **~4x smaller than raw HTML**, so your model gets more signal with fewer tokens. One tool call, no browser, no scraping setup.
+Read any webpage as clean Markdown inside Cursor — **~4x smaller than raw HTML**, so your model gets more signal with fewer tokens. One local MCP server, no browser automation, and no scraping setup.
 
 ## Install
 
-In Cursor, run:
+After approval, install **Skim — Clean Web Reader** from Cursor's official Marketplace. Cursor will ask for your Skim API key when you configure the plugin.
 
-```
-/add-plugin skim-mcp
-```
-
-Or go to **Settings → Plugins** and search for **Skim**.
+For local testing before Marketplace approval, install this repository as a local Cursor plugin and use the configuration below.
 
 ## Setup
 
-### Option A — Card API key (recommended)
+### Card API key
 
-Get a free key at [skim402.com/pricing](https://skim402.com/pricing) (1,000 reads/month), then add it to Cursor's MCP environment:
+Get a free key at [skim402.com/pricing](https://skim402.com/pricing) (1,000 reads/month). The official plugin configuration passes the key to the local MCP process without putting the value in this repository:
 
 ```json
 {
   "mcpServers": {
     "skim": {
       "command": "npx",
-      "args": ["-y", "skim-mcp"],
+      "args": ["-y", "skim-mcp@0.2.5"],
       "env": {
         "SKIM_API_KEY": "sk402_your_key_here"
       }
@@ -32,28 +28,19 @@ Get a free key at [skim402.com/pricing](https://skim402.com/pricing) (1,000 read
 }
 ```
 
-### Option B — Crypto wallet (pay per call)
-
-If you prefer x402 pay-per-call ($0.002 USDC on Base, no monthly plan):
-
-```json
-"env": {
-  "SKIM_WALLET_PRIVATE_KEY": "0xyour-base-wallet-key"
-}
-```
-
-Fund the wallet with a small USDC balance on Base. Setup guide: [skim402.com/wallet](https://skim402.com/wallet).
+This first-party Cursor plugin intentionally does not ask for a wallet or private key. Wallet/x402 setup remains a separate Skim path.
 
 ## Tools
 
 | Tool | What it does | Cost |
 |------|-------------|------|
-| `skim_read` | Read a URL → clean Markdown | $0.002 |
-| `skim_extract` | Extract structured fields from a page | $0.005 |
-| `skim_search` | Search + read top results | $0.015 |
+| `skim_read` | Read a URL → clean Markdown | Uses Skim plan credits |
+| `skim_extract` | Extract structured fields from a page | Uses Skim plan credits |
+| `skim_search` | Search + read top results | Uses Skim plan credits |
 
 ## Links
 
 - [skim402.com](https://skim402.com) — home page & pricing
+- [Skim docs](https://skim402.com/docs) — API and MCP setup
 - [npm: skim-mcp](https://www.npmjs.com/package/skim-mcp) — package
 - [MCP Registry](https://registry.modelcontextprotocol.io) — official listing
