@@ -2,7 +2,7 @@
   "$schema": "https://cursor.com/schemas/plugin.schema.json",
   "name": "skim-mcp",
   "displayName": "Skim — Clean Web Reader",
-  "description": "Give Cursor clean, agent-ready Markdown from webpages with one local MCP server and a Skim card API key.",
+  "description": "More than a reader: clean + batch reads, JavaScript rendering, structured extraction, crawling, PDFs, page watches, and Signals. Typically ~4x smaller than raw HTML. Uses a Skim card API key.",
   "version": "0.2.5",
   "author": {
     "name": "Skim",
@@ -12,7 +12,19 @@
   "repository": "https://github.com/JessieJanie/cursor-plugin-skim",
   "license": "MIT",
   "logo": "assets/logo.svg",
-  "keywords": ["web", "reader", "markdown", "scraping", "mcp"],
+  "keywords": [
+    "web",
+    "reader",
+    "markdown",
+    "batch",
+    "javascript",
+    "extraction",
+    "crawl",
+    "pdf",
+    "monitoring",
+    "signals",
+    "mcp"
+  ],
   "mcpServers": "mcp.json",
   "variables": {
     "type": "object",
@@ -23,6 +35,8 @@
         "description": "Your Skim card API key. Get a free key at skim402.com/pricing."
       }
     },
-    "required": ["SKIM_API_KEY"]
+    "required": [
+      "SKIM_API_KEY"
+    ]
   }
 }
