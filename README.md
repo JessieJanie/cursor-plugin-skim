@@ -1,6 +1,6 @@
 # Skim — Cursor Plugin
 
-Read any webpage as clean Markdown inside Cursor — **~4x smaller than raw HTML**, so your model gets more signal with fewer tokens. One local MCP server, no browser automation, and no scraping setup.
+Skim is more than a simple web reader. This plugin gives Cursor the complete Skim MCP toolkit: clean single and batch reads, JavaScript/browser rendering for dynamic pages, structured extraction, linked-page crawling, PDFs, page-change watches, and curated Signals. Skim's clean Markdown is typically **~4x smaller than raw HTML in measured comparisons**, so the model gets more useful content with less noise.
 
 ## Install
 
@@ -32,15 +32,26 @@ This first-party Cursor plugin intentionally does not ask for a wallet or privat
 
 ## Tools
 
-| Tool | What it does | Cost |
-|------|-------------|------|
-| `skim_read` | Read a URL → clean Markdown | Uses Skim plan credits |
-| `skim_extract` | Extract structured fields from a page | Uses Skim plan credits |
-| `skim_search` | Search + read top results | Uses Skim plan credits |
+The bundled `skim-mcp` server exposes eight tools:
 
+| Tool | What it does |
+|------|--------------|
+| `read_url` | Read one URL as clean Markdown |
+| `read_urls` | Batch-read several URLs in one request |
+| `extract_url` | Extract structured fields using a schema |
+| `crawl_url` | Read a page and its linked pages |
+| `read_pdf` | Read a public PDF |
+| `watch_urls` | Register pages to watch for changes |
+| `check_watch` | Poll a watch and return detected changes |
+| `poll_signal` | Read a curated Skim Signal feed |
+
+Try the same workflows first in Skim's [Playground](https://skim402.com/playground)
+or [Workbench](https://skim402.com/workbench).
 ## Links
 
-- [skim402.com](https://skim402.com) — home page & pricing
+- [skim402.com](https://skim402.com) — home page
+- [Pricing and free key](https://skim402.com/pricing) — card-plan setup
+- [Playground](https://skim402.com/playground) and [Workbench](https://skim402.com/workbench) — test every workflow
 - [Skim docs](https://skim402.com/docs) — API and MCP setup
 - [npm: skim-mcp](https://www.npmjs.com/package/skim-mcp) — package
 - [MCP Registry](https://registry.modelcontextprotocol.io) — official listing
